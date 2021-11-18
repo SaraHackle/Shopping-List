@@ -17,7 +17,7 @@ const groceryList = [
   {
     id: 4,
     name: "Chicken",
-    price: 7.99,
+    price: 8.99,
   },
   {
     id: 5,
@@ -45,10 +45,14 @@ const addToShoppingList = (newName, newPrice) => {
     date: Date(),
   };
   groceryList.push(newGroceryListItem);
-  console.log(groceryList);
 };
+
 const steak = addToShoppingList("Steak", 14.99);
 const shrimp = addToShoppingList("Shrimp", 12.49);
 const frozenPizza = addToShoppingList("Frozen Pizza", 5.49);
-const coffee = addToShoppingList("Coffee", 4.49)
-const wine = addToShoppingList("Cabernet", 9.99)
+const coffee = addToShoppingList("Coffee", 4.49);
+const wine = addToShoppingList("Cabernet", 9.99);
+
+for (expensiveItem of groceryList) {
+  if (expensiveItem.price > 8) console.log(expensiveItem);
+}
